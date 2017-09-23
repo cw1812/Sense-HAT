@@ -60,7 +60,7 @@ try:
 
             else:
                 yellow = (255, 255, 102)
-                blue = (240, 248, 255)
+                blue = (135, 206, 235)
                 
                 sense.set_pixel(1, 1, yellow)
                 sense.set_pixel(2, 0, yellow)
