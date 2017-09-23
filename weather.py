@@ -35,7 +35,7 @@ try:
 
                 humidity = sense.get_humidity()
                 humidity_cal = humidity * (2.5-0.029*temp)
-                humidity_cal = round(humidity, 1)
+                humidity_cal = round(humidity_cal, 1)
                 print("Humidity RH%",humidity_cal)
 
                 pressure = sense.get_pressure()
