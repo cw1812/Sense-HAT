@@ -60,6 +60,8 @@ try:
 
             else:
                 yellow = (255, 255, 102)
+                blue = (240, 248, 255)
+                
                 sense.set_pixel(1, 1, yellow)
                 sense.set_pixel(2, 0, yellow)
                 sense.set_pixel(3, 1, yellow) 
@@ -67,6 +69,7 @@ try:
                 sense.set_pixel(5, 0, yellow)
                 sense.set_pixel(6, 1, yellow)
                 
+                sense.set_pixel(0, 2, yellow)
                 sense.set_pixel(0, 3, yellow)
                 sense.set_pixel(0, 4, yellow)
                 sense.set_pixel(0, 5, yellow)
@@ -79,11 +82,12 @@ try:
                 sense.set_pixel(7, 5, yellow)
                 sense.set_pixel(7, 4, yellow)
                 sense.set_pixel(7, 3, yellow)
+                sense.set_pixel(7, 2, yellow)
                 
-                sense.set_pixel(2, 3, yellow)
-                sense.set_pixel(2, 4, yellow)
-                sense.set_pixel(5, 3, yellow)
-                sense.set_pixel(5, 4, yellow)
+                sense.set_pixel(2, 3, blue)
+                sense.set_pixel(2, 4, blue)
+                sense.set_pixel(5, 3, blue)
+                sense.set_pixel(5, 4, blue)
                 
                 time.sleep(0.5)
                 sense.clear()
