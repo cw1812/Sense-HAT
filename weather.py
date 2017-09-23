@@ -69,16 +69,16 @@ try:
                 sense.set_pixel(7, 1, yellow)
                 
                 sense.set_pixel(1, 6, yellow)
-                sense.set_pixel(2, 6, yellow)
+                sense.set_pixel(2, 7, yellow)
                 sense.set_pixel(3, 7, yellow)
                 sense.set_pixel(4, 7, yellow)
-                sense.set_pixel(5, 6, yellow)
+                sense.set_pixel(5, 7, yellow)
                 sense.set_pixel(6, 6, yellow)
                 
-                sense.set_pixel(2, 2, yellow)
                 sense.set_pixel(2, 3, yellow)
-                sense.set_pixel(5, 2, yellow)
+                sense.set_pixel(2, 4, yellow)
                 sense.set_pixel(5, 3, yellow)
+                sense.set_pixel(5, 4, yellow)
                 
                 time.sleep(0.5)
                 sense.clear()
