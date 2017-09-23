@@ -34,9 +34,8 @@ try:
                 print("Temperature Cal",temp_cal)
 
                 humidity = sense.get_humidity()
-                humidity_cal = humidity * (2.5-0.029*temp)
-                humidity_cal = round(humidity_cal, 1)
-                print("Humidity RH%",humidity_cal)
+                humidity = round(humidity, 1)
+                print("Humidity RH%",humidity)
 
                 pressure = sense.get_pressure()
                 pressure = round(pressure, 1)
@@ -55,7 +54,7 @@ try:
                 else:
                       sense.set_rotation(0)
 
-                sense.show_message(current_time + "  " + str(temp_cal) + "C  " + str(humidity_cal) + "%  " + str(pressure) + "hPa  ", scroll_speed=(0.1), back_colour= [0,0,0], text_colour= [200,0,200])
+                sense.show_message(current_time + "  " + str(temp_cal) + "C  " + str(humidity) + "%  " + str(pressure) + "hPa  ", scroll_speed=(0.1), back_colour= [0,0,0], text_colour= [200,0,200])
 
                 sense.low_light = True
 
