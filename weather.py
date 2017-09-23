@@ -70,8 +70,8 @@ try:
                 
                 sense.set_pixel(1, 6, yellow)
                 sense.set_pixel(2, 7, yellow)
-                sense.set_pixel(3, 6, yellow)
-                sense.set_pixel(4, 6, yellow)
+                sense.set_pixel(3, 7, yellow)
+                sense.set_pixel(4, 7, yellow)
                 sense.set_pixel(5, 7, yellow)
                 sense.set_pixel(6, 6, yellow)
                 
