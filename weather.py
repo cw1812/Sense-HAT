@@ -24,7 +24,7 @@ try:
 
                 cpu_temp = getCPUtemperature()
                 temp = sense.get_temperature()
-                temp_cal = float(temp) - ((float(cpu_temp) - float(temp))/1.5)
+                temp_cal = float(temp) - ((float(cpu_temp) - float(temp))/0.8)
                 temp = round(temp, 1)
                 cpu_temp = round(float(cpu_temp), 1)
                 temp_cal = round(temp_cal, 1)
