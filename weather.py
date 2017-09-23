@@ -24,7 +24,7 @@ try:
 
                 cpu_temp = getCPUtemperature()
                 temp = sense.get_temperature()
-                temp_cal = (float(temp) - 0.52*float(cpu_temp))/(0.48)
+                temp_cal = (float(temp) - 0.52*float(cpu_temp))/(1-0.52)
                 temp = round(temp, 1)
                 cpu_temp = round(float(cpu_temp), 1)
                 temp_cal = round(temp_cal, 1)
@@ -34,8 +34,9 @@ try:
                 print("Temperature Cal",temp_cal)
 
                 humidity = sense.get_humidity()
-                humidity = round(humidity, 1)
-                print("Humidity RH%",humidity)
+                humidity_cal = humidity * (2.5-0.029*temp)
+                humidity_cal = round(humidity, 1)
+                print("Humidity RH%",humidity_cal)
 
                 pressure = sense.get_pressure()
                 pressure = round(pressure, 1)
@@ -54,7 +55,7 @@ try:
                 else:
                       sense.set_rotation(0)
 
-                sense.show_message(current_time + "  " + str(temp_cal) + "C  " + str(humidity) + "%  " + str(pressure) + "hPa  ", scroll_speed=(0.1), back_colour= [0,0,0], text_colour= [200,0,200])
+                sense.show_message(current_time + "  " + str(temp_cal) + "C  " + str(humidity_cal) + "%  " + str(pressure) + "hPa  ", scroll_speed=(0.1), back_colour= [0,0,0], text_colour= [200,0,200])
 
                 sense.low_light = True
 
