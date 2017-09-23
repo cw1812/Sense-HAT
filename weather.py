@@ -59,7 +59,10 @@ try:
                 sense.low_light = True
 
             else:
-                time.sleep(0.5)
+                sense.set_pixel(0, 0, 255, 255, 224)
+                time.sleep(0.25)
+                sense.clear()
+                time.sleep(0.25)
 
 except KeyboardInterrupt:
       pass
