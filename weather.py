@@ -59,10 +59,20 @@ try:
                 sense.low_light = True
 
             else:
-                sense.set_pixel(0, 0, 255, 255, 224)
-                time.sleep(0.25)
+                yellow = (255, 255, 102)
+                sense.set_pixel(1, 4, yellow)
+                sense.set_pixel(2, 5, yellow)
+                sense.set_pixel(3, 2, yellow)
+                sense.set_pixel(3, 3, yellow)
+                sense.set_pixel(3, 6, yellow)
+                sense.set_pixel(4, 5, yellow)
+                sense.set_pixel(5, 2, yellow)
+                sense.set_pixel(5, 3, yellow)
+                sense.set_pixel(5, 6, yellow)
+                sense.set_pixel(6, 5, yellow)
+                sense.set_pixel(7, 4, yellow)
+                time.sleep(0.5)
                 sense.clear()
-                time.sleep(0.25)
 
 except KeyboardInterrupt:
       pass
