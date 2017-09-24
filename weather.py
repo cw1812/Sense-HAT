@@ -5,7 +5,6 @@ from sense_hat import SenseHat
 import time, os, sys
 
 sense = SenseHat()
-sense.clear()
 sense.low_light = True
 
 def getCPUtemperature():
@@ -62,32 +61,6 @@ try:
                 sense.show_message(current_time + "  " + str(temp_cal) + "C  " + str(humidity) + "%  " + str(pressure) + "hPa  ", scroll_speed=(0.1), back_colour= [0,0,0], text_colour= [200,0,200])
 
             else:
-                yellow = (255, 255, 102)
-                blue = (135, 206, 235)
-                
-                sense.set_pixel(1, 2, yellow)
-                sense.set_pixel(2, 1, yellow)
-                sense.set_pixel(3, 2, yellow) 
-                sense.set_pixel(4, 2, yellow)
-                sense.set_pixel(5, 1, yellow)
-                sense.set_pixel(6, 2, yellow)
-                
-                sense.set_pixel(0, 3, yellow)
-                sense.set_pixel(0, 4, yellow)
-                sense.set_pixel(0, 5, yellow)
-                sense.set_pixel(1, 6, yellow)
-                sense.set_pixel(2, 7, yellow)
-                sense.set_pixel(3, 7, yellow)
-                sense.set_pixel(4, 7, yellow)
-                sense.set_pixel(5, 7, yellow)
-                sense.set_pixel(6, 6, yellow)
-                sense.set_pixel(7, 5, yellow)
-                sense.set_pixel(7, 4, yellow)
-                sense.set_pixel(7, 3, yellow)
-                
-                sense.set_pixel(2, 4, blue)
-                sense.set_pixel(5, 4, blue)
-                
                 time.sleep(0.5)
 
 except KeyboardInterrupt:
