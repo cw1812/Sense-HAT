@@ -26,12 +26,15 @@ try:
 
                 cpu_temp = getCPUtemperature()
                 temp = sense.get_temperature()
+                temp_p = sense.get_temperature_from_pressure()
                 temp_cal = float(temp) - (float(cpu_temp)-float(temp))/3.037
                 temp = round(temp, 1)
                 cpu_temp = round(float(cpu_temp), 1)
+                temp_p = round(temp_p, 1)
                 temp_cal = round(temp_cal, 1)
 
                 print("Temperature Sense",temp)
+                print("Temperature P",temp_p)
                 print("Temperature CPU",cpu_temp)
                 print("Temperature Cal",temp_cal)
 
