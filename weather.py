@@ -6,6 +6,7 @@ import time, os, sys
 
 sense = SenseHat()
 sense.clear()
+sense.low_light = True
 
 def getCPUtemperature():
     res = os.popen('vcgencmd measure_temp').readline()
@@ -19,6 +20,7 @@ try:
 
             if  float(now)==0:
 
+                sense.clear()
                 current_time = time.strftime("%H:%M")
                 print("Current Time",current_time)
 
@@ -56,20 +58,17 @@ try:
 
                 sense.show_message(current_time + "  " + str(temp_cal) + "C  " + str(humidity) + "%  " + str(pressure) + "hPa  ", scroll_speed=(0.1), back_colour= [0,0,0], text_colour= [200,0,200])
 
-                sense.low_light = True
-
             else:
                 yellow = (255, 255, 102)
                 blue = (135, 206, 235)
                 
-                sense.set_pixel(1, 1, yellow)
-                sense.set_pixel(2, 0, yellow)
-                sense.set_pixel(3, 1, yellow) 
-                sense.set_pixel(4, 1, yellow)
-                sense.set_pixel(5, 0, yellow)
-                sense.set_pixel(6, 1, yellow)
+                sense.set_pixel(1, 2, yellow)
+                sense.set_pixel(2, 1, yellow)
+                sense.set_pixel(3, 2, yellow) 
+                sense.set_pixel(4, 2, yellow)
+                sense.set_pixel(5, 1, yellow)
+                sense.set_pixel(6, 2, yellow)
                 
-                sense.set_pixel(0, 2, yellow)
                 sense.set_pixel(0, 3, yellow)
                 sense.set_pixel(0, 4, yellow)
                 sense.set_pixel(0, 5, yellow)
@@ -82,15 +81,11 @@ try:
                 sense.set_pixel(7, 5, yellow)
                 sense.set_pixel(7, 4, yellow)
                 sense.set_pixel(7, 3, yellow)
-                sense.set_pixel(7, 2, yellow)
                 
-                sense.set_pixel(2, 3, blue)
                 sense.set_pixel(2, 4, blue)
-                sense.set_pixel(5, 3, blue)
                 sense.set_pixel(5, 4, blue)
                 
                 time.sleep(0.5)
-                sense.clear()
 
 except KeyboardInterrupt:
       pass
