@@ -1,0 +1,4 @@
+from sense_hat import SenseHat
+sense = SenseHat()
+
+def unicorn_number (x, colour_t, colour_b)
