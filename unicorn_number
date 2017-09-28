@@ -1,4 +1,12 @@
 from sense_hat import SenseHat
 sense = SenseHat()
 
-def unicorn_number (x, colour_t, colour_b)
+def unicorn_number (value, colour_t, colour_b)
+
+    x = int ((value/10))        # first digit of value
+    y = round ((value - x*10))  # second digit of value
+
+    if x==0
+    pixel_list = (
+    
+    sense. set_pixels(pixel_list)
